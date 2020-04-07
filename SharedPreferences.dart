@@ -5,9 +5,6 @@ addStringToSF() async {
 }
 
 //Reading from Sharedpreferenes
-getStringValuesSF() async {
-  SharedPreferences prefs = await SharedPreferences.getInstance();
-  //Return String
-  String stringValue = prefs.getString('stringValue');
-  return stringValue;
-}
+SharedPreferences.getInstance().then((SharedPreferences sp){
+  print(sp.getString("deviceID"));
+});
