@@ -1,13 +1,15 @@
-List<String> _listOfDays(){
+List<String> getListOfDays(){
     List<String> listOfDays = <String>[];
-    var datefrom = DateTime.parse(fromDate);
-    while (true){
-      var nextDate = datefrom.add(Duration(days: 1));
-      var formatter = DateFormat("dd-MMM-yyyy");
+    var formatter = DateFormat("dd-MMM-yyyy");
+    listOfDays.add(fromDate);
+    DateTime datefrom = formatter.parse(fromDate);
+    DateTime nextDate = datefrom.add(Duration(days: 1));
+    while (nextDate != formatter.parse(toDate)){
       listOfDays.add(formatter.format(nextDate));
-      if (nextDate == DateTime.parse(toDate)){
-        break;
-      }
+      datefrom = nextDate;
+      nextDate = datefrom.add(Duration(days: 1));
     }
+    listOfDays.add(formatter.format(nextDate));
+    print(listOfDays.length);
     return listOfDays;
   }
