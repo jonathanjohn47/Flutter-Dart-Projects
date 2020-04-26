@@ -5,6 +5,10 @@ addStringToSF() async {
 }
 
 //Reading from Sharedpreferenes
-SharedPreferences.getInstance().then((SharedPreferences sp){
-  print(sp.getString("deviceID"));
-});
+String mName;
+  void getstudentname() {
+    SharedPreferences.getInstance().then((SharedPreferences sp){
+      String studentname = sp.getString("student_name");
+      mName = studentname;
+    });
+  }
