@@ -1,4 +1,4 @@
-cupertino_icons: ^0.1.2
+  cupertino_icons: ^0.1.2
   table_calendar: ^2.2.3
   firebase_auth: ^0.15.5+3
   cloud_firestore: ^0.13.4+2
@@ -16,3 +16,6 @@ cupertino_icons: ^0.1.2
   progress_dialog: ^1.2.2
   splashscreen: ^1.2.0
   pull_to_refresh: ^1.5.7
+  toast: ^0.1.5
+  google_maps_flutter:
+  geolocator: ^5.3.1
